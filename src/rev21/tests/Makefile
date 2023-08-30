@@ -13,7 +13,7 @@ all:
 	)
 
 test:
-	$(foreach rule, $(TEST_RULES), tamarin-prover --heuristic=S --prove=exists_ $(rule).spthy -o=$(rule).spthy 2>/dev/null +RTS -N16 -H75G -M150G -RTS ; )
+	$(foreach rule, $(TEST_RULES), tamarin-prover --heuristic=S --prove=exists_ $(rule).spthy -o=$(rule).spthy 2>/dev/null +RTS -H75G -M150G -RTS ; )
 clean:
 	rm -f *.spthy
 

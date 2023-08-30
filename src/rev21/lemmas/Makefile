@@ -1,7 +1,7 @@
 DEPS= $(wildcard *.m4i)
 M4= $(patsubst %.m4,%.spthy,$(wildcard *.m4))
 PIPE=2>error.log 1>>success.log
-TAM=tamarin-prover +RTS -N16 -H75G -M150G -RTS
+TAM=tamarin-prover +RTS -H75G -M150G -RTS
 
 all: $(M4)
 
