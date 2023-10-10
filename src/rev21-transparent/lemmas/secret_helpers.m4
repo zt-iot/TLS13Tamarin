@@ -15,6 +15,12 @@ include(header.m4i)
 include(model.m4i)
 include(all_lemmas.m4i)
 
+tactic: sig_origin_tac
+prio: regex "finished"
+prio: regex "certificate_verify"
+prio: regex "sign"
+prio: regex "certificate_request_context"
+
 uniq(C2d)
 uniq(C2d_PSK)
 uniq(S2d)
