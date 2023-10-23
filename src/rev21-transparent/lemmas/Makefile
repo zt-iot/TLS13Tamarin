@@ -29,7 +29,7 @@ proofs:
 	bash -c "$(TAM) secret_helpers.spthy --prove={tid*,ku*,hsms*,posths_rms*} --heuristic=S --output=../proofs/secret_helpers.1.spthy $(PIPE)"
 	bash -c "$(TAM) secret_helpers.spthy --prove=sig_origin --heuristic={sig_origin_tac} --output=../proofs/secret_helpers.2.spthy $(PIPE)"
 	bash -c "$(TAM) secret_helpers.spthy --prove={matching_rms_posths*,matching_transcripts_posths*,matching_rms_actors*} --bound=8 --heuristic=CCCiiiiiiii --output=../proofs/secret_helpers.3.spthy $(PIPE)"
-	bash -c "$(TAM) secret_helpers.spthy --prove=matching_sessions* --heuristic=CCCCCissssssssssssssssssssssss --output=../proofs/secret_helpers.3.spthy $(PIPE)"
+	bash -c "$(TAM) secret_helpers.spthy --prove=matching_sessions* --heuristic=CCCCCissssssssssssssssssssssss --output=../proofs/secret_helpers.4.spthy $(PIPE)"
 	# To prove manually:
 	#   - auth_psk (75% auto: autoprove for recv_server_auth{_cert} and  recv_client_auth_cert. The rest is manual by using CommitID -> $S.1 = $S.
 	#   - hsms_hs_thingy
